@@ -58,10 +58,6 @@ For every state **s = (x, y, z)** and action **a**, the transition model produce
 - **Secondary successor** `s₂` with probability **0.01**
 - **Tertiary successor** `s₃` with probability **0.01**
 
----
-
-## 📋 Tabular Transition Model
-
 Let:
 
 - `X+` = x + 1  
