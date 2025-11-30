@@ -126,8 +126,6 @@ These tables correspond to the action-dependent rewards used by the UAV.
 |---------------------|-----------------|-----------------------|
 | **Reward**          | -7              | −2                    |
 
-> **Note:** `X` denotes the neutral reward for moving forward along +X without lateral or vertical displacement.
-
 Terminal and Collision Rewards
 
 | **Scenario**                                   | **Reward** |
