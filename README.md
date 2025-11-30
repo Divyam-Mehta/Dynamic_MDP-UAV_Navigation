@@ -47,3 +47,42 @@ The goal is to **reach the far boundary of the grid without colliding with any b
 | **U**      | Lift Up-Forward   | Move along **+X** and **+Z** directions     |
 | **D**      | Lift Down-Forward | Move along **+X** and **−Z** directions     |
 
+---
+
+### 🔀 Transition Space
+
+The UAV operates under **stochastic dynamics**.  
+For every state **s = (x, y, z)** and action **a**, the transition model produces **three possible successor states**:
+
+- **Primary successor** `s₁` with probability **0.98**
+- **Secondary successor** `s₂` with probability **0.01**
+- **Tertiary successor** `s₃` with probability **0.01**
+
+---
+
+## 📋 Tabular Transition Model
+
+Let:
+
+- `X+` = x + 1  
+- `Y+` = y + 1  
+- `Y−` = y − 1  
+- `Z+` = z + 1  
+- `Z−` = z − 1  
+
+> **Note:** Boundary conditions clamp values to the grid limits.
+
+| **Action** | **Primary Successor s₁ (≈ 98%)** | **Secondary s₂ (≈ 1%)** | **Tertiary s₃ (≈ 1%)** |
+|-----------|----------------------------------|-------------------------|------------------------|
+| **F**     | (X+, y, z)                        | (X+, Y+, z)             | (X+, Y−, z)            |
+| **L**     | (X+, Y+, z)                       | (X+, y, z)              | (X+, y, z)             |
+| **R**     | (X+, Y−, z)                       | (X+, y, z)              | (X+, y, z)             |
+| **U**     | (X+, y, Z+)                       | (X+, y, z)              | (X+, y, z)             |
+| **D**     | (X+, y, Z−)                       | (X+, y, z)              | (X+, y, z)             |
+
+Boundary Rule
+
+If the UAV reaches any grid limit — **x = 19**, **y = 0**, **y = 19**, **z = 0**, or **z = 4** —  
+the corresponding coordinate is **clamped**, meaning:
+
+> The UAV **remains at the edge** in that dimension instead of moving outside the defined 3D space.
