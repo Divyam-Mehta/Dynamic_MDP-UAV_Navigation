@@ -78,7 +78,6 @@ Let:
 
 Boundary Rule
 
-If the UAV reaches any grid limit — **x = 19**, **y = 0**, **y = 19**, **z = 0**, or **z = 4** —  
-the corresponding coordinate is **clamped**, meaning:
+If the UAV reaches any grid limit - **x = 19**, **y = 0**, **y = 19**, **z = 0**, or **z = 4**, the corresponding coordinate is **clamped**, meaning:
 
 > The UAV **remains at the edge** in that dimension instead of moving outside the defined 3D space.
