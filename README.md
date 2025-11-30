@@ -1,5 +1,11 @@
 # Dynamic MDP for UAV Bird-Strike Avoidance
 
+## 🎥 Test Video
+
+<p align="center">
+  <img src="media/100_Birds_Same_Height_and_Below.gif" width="640" />
+</p>
+
 This repository implements a **dynamic Markov Decision Process (MDP)** to compute collision-avoiding trajectories for a **Unmanned Aerial Vehicle (UAV)** flying through a 3D airspace populated with multiple birds.
 
 The UAV flies through a **20 × 20 × 5 discrete grid**, while a flock of birds moves with continuous velocities. At each time step, the algorithm:
