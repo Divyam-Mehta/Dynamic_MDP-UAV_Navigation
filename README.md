@@ -35,7 +35,14 @@ The goal is to **reach the far boundary of the grid without colliding with any b
 
 ---
 
-## 🧱 Environment & State Space
+## 🚀 Action Space
 
-### Grid World
+> **The Action Space consists of 5 distinct actions – {F, L, R, U, D}**
 
+| **Symbol** | **Name**           | **Description (Intended Motion)**          |
+|------------|-------------------|---------------------------------------------|
+| **F**      | Forward           | Move along **+X** direction                 |
+| **L**      | Left-Forward      | Move along **+X** and **+Y** directions     |
+| **R**      | Right-Forward     | Move along **+X** and **−Y** directions     |
+| **U**      | Lift Up-Forward   | Move along **+X** and **+Z** directions     |
+| **D**      | Lift Down-Forward | Move along **+X** and **−Z** directions     |
