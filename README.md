@@ -94,9 +94,7 @@ The reward function encodes three primary objectives:
 
 > **Note:** The cost of lifting **up** (`U`) is intentionally higher than lifting **down** (`D`) because the UAV requires **more fuel and thrust to ascend** against gravity, whereas descending consumes significantly less energy.
 
----
-
-Base Navigation Rewards
+**Base Navigation Rewards**
 
 These tables correspond to the action-dependent rewards used by the UAV.
 
