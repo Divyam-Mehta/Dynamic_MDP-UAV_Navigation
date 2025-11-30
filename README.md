@@ -46,3 +46,4 @@ The goal is to **reach the far boundary of the grid without colliding with any b
 | **R**      | Right-Forward     | Move along **+X** and **−Y** directions     |
 | **U**      | Lift Up-Forward   | Move along **+X** and **+Z** directions     |
 | **D**      | Lift Down-Forward | Move along **+X** and **−Z** directions     |
+
