@@ -81,3 +81,57 @@ Boundary Rule
 If the UAV reaches any grid limit - **x = 19**, **y = 0**, **y = 19**, **z = 0**, or **z = 4**, the corresponding coordinate is **clamped**, meaning:
 
 > The UAV **remains at the edge** in that dimension instead of moving outside the defined 3D space.
+
+---
+
+## 💰 Reward Function
+
+The reward function encodes three primary objectives:
+
+- **Goal reward**: Encourages reaching the far boundary (**x = 19**).
+- **Collision penalty**: Applies a large negative reward when the UAV overlaps with any bird.
+- **Control cost**: Discourages aggressive or vertical maneuvers.
+
+Base Navigation Rewards
+
+These tables correspond to the action-dependent rewards used by the UAV.
+
+#### **A = FORWARD**
+
+| **Current State** | **X + Forward** | **X + Left-Forward** | **X + Right-Forward** |
+|------------------|----------------|----------------------|-----------------------|
+| **Reward**        | X              | −1                   | −2                    |
+
+#### **A = LEFT**
+
+| **Current State** | **X + Forward** | **X + Left-Forward** |
+|------------------|----------------|----------------------|
+| **Reward**        | X              | −3                   |
+
+#### **A = RIGHT**
+
+| **Current State** | **X + Forward** | **X + Right-Forward** |
+|------------------|----------------|-----------------------|
+| **Reward**        | X              | −3                    |
+
+#### **A = LIFT UP**
+
+| **Current State** | **X + Forward** | **X + Upper-Forward** |
+|------------------|----------------|-----------------------|
+| **Reward**        | X              | −7                    |
+
+#### **A = LIFT DOWN**
+
+| **Current State** | **X + Forward** | **X + Lower-Forward** |
+|------------------|----------------|-----------------------|
+| **Reward**        | X              | −7                    |
+
+> **Note:** `X` denotes the neutral reward for moving forward along +X without lateral or vertical displacement.
+
+Terminal and Collision Rewards
+
+| **Scenario**                                   | **Reward** |
+|------------------------------------------------|-----------:|
+| Reaching any **goal state** *(x = 19)*         | **+100**   |
+| Colliding with a **bird** (current or predicted)| **−100**   |
+| Remaining in a **goal state**                  | **0**      |
