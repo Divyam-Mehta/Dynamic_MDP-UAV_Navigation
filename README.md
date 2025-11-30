@@ -98,33 +98,33 @@ These tables correspond to the action-dependent rewards used by the UAV.
 
 #### **A = FORWARD**
 
-| **Current State** | **X + Forward** | **X + Left-Forward** | **X + Right-Forward** |
-|------------------|----------------|----------------------|-----------------------|
-| **Reward**        | X              | −1                   | −2                    |
+| **Current State-X** | **X + Forward** | **X + Left-Forward** | **X + Right-Forward** |
+|---------------------|-----------------|----------------------|-----------------------|
+| **Reward**          | -1              | -2                   | −2                    |
 
 #### **A = LEFT**
 
-| **Current State** | **X + Forward** | **X + Left-Forward** |
-|------------------|----------------|----------------------|
-| **Reward**        | X              | −3                   |
+| **Current State-X** | **X + Forward** | **X + Left-Forward** |
+|---------------------|-----------------|----------------------|
+| **Reward**          | -3              | −2                   |
 
 #### **A = RIGHT**
 
-| **Current State** | **X + Forward** | **X + Right-Forward** |
-|------------------|----------------|-----------------------|
-| **Reward**        | X              | −3                    |
+| **Current State-X** | **X + Forward** | **X + Right-Forward** |
+|---------------------|-----------------|-----------------------|
+| **Reward**          | -3              | −2                    |
 
 #### **A = LIFT UP**
 
 | **Current State** | **X + Forward** | **X + Upper-Forward** |
-|------------------|----------------|-----------------------|
-| **Reward**        | X              | −7                    |
+|-------------------|-----------------|-----------------------|
+| **Reward**        | -7              | −5                    |
 
 #### **A = LIFT DOWN**
 
 | **Current State** | **X + Forward** | **X + Lower-Forward** |
-|------------------|----------------|-----------------------|
-| **Reward**        | X              | −7                    |
+|-------------------|-----------------|-----------------------|
+| **Reward**        | -7              | −2                    |
 
 > **Note:** `X` denotes the neutral reward for moving forward along +X without lateral or vertical displacement.
 
