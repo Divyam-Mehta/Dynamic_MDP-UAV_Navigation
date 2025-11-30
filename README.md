@@ -6,6 +6,10 @@
   <img src="media/100_Birds_Same_Height_and_Below.gif" width="640" />
 </p>
 
+- **UAV** is shown in **green** to highlight its current position and path.
+- **Birds** are shown in **red**, indicating potential collision hazards.
+- **Empty grid cells** are rendered in **gray**, while the background remains **white** for contrast.
+
 This repository implements a **dynamic Markov Decision Process (MDP)** to compute collision-avoiding trajectories for a **Unmanned Aerial Vehicle (UAV)** flying through a 3D airspace populated with multiple birds.
 
 The UAV flies through a **20 × 20 × 5 discrete grid**, while a flock of birds moves with continuous velocities. At each time step, the algorithm:
