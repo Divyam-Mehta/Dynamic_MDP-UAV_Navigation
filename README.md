@@ -6,9 +6,9 @@
   <img src="media/100_Birds_Same_Height_and_Below.gif" width="640" />
 </p>
 
-- **UAV** is shown in **green** to highlight its current position and path.
-- **Birds** are shown in **red**, indicating potential collision hazards.
-- **Empty grid cells** are rendered in **gray**, while the background remains **white** for contrast.
+- **UAV** is shown in **green** 🟩 to highlight its current position and path.
+- **Birds** are shown in **red** 🟥, indicating potential collision hazards.
+- **Empty grid cells** are rendered in **gray** ⬜, while the background remains **white** for contrast.
 
 > **Note:** While the grid visualization shows the spatial movement, the **policy computed at each time step (from `t = 0` to `t = 19`) is printed in the terminal**. This allows you to observe both the visual trajectory and the decision-making process of the UAV in parallel.
 
