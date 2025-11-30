@@ -116,15 +116,15 @@ These tables correspond to the action-dependent rewards used by the UAV.
 
 #### **A = LIFT UP**
 
-| **Current State** | **X + Forward** | **X + Upper-Forward** |
-|-------------------|-----------------|-----------------------|
-| **Reward**        | -7              | −5                    |
+| **Current State-X** | **X + Forward** | **X + Upper-Forward** |
+|---------------------|-----------------|-----------------------|
+| **Reward**          | -7              | −5                    |
 
 #### **A = LIFT DOWN**
 
-| **Current State** | **X + Forward** | **X + Lower-Forward** |
-|-------------------|-----------------|-----------------------|
-| **Reward**        | -7              | −2                    |
+| **Current State-X** | **X + Forward** | **X + Lower-Forward** |
+|---------------------|-----------------|-----------------------|
+| **Reward**          | -7              | −2                    |
 
 > **Note:** `X` denotes the neutral reward for moving forward along +X without lateral or vertical displacement.
 
